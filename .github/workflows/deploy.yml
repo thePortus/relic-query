@@ -30,9 +30,6 @@ jobs:
         run: |
           REPO_NAME=$(echo $REPOSITORY_NAME | cut -d'/' -f2)
           npm run build --prod
-
-      - name: Log build directory structure
-        run: ls -R dist/relic-query/browser
     
       - name: Move build output to docs
         run: |
@@ -41,9 +38,6 @@ jobs:
 
       - name: Rename index.html to 404.html
         run: cp docs/index.html docs/404.html
-
-      - name: Log build directory structure
-        run: ls -R docs
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

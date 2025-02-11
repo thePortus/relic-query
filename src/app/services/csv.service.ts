@@ -10,7 +10,8 @@ export class CsvService {
   constructor(private http: HttpClient) { }
 
   parseCSV(fileName: string): Promise<any[]> {
-    const filePath = `${fileName}`;
+    const baseURL = '/'; // Set the base URL
+    const filePath = `${baseURL}${fileName}`;
     return this.http.get(filePath, { responseType: 'text' }).toPromise().then((csvData:any) => {
       return new Promise((resolve, reject) => {
         Papa.parse(csvData, {
