@@ -26,7 +26,7 @@ jobs:
           REPOSITORY_NAME: ${{ github.repository }}
         run: |
           REPO_NAME=$(echo $REPOSITORY_NAME | cut -d'/' -f2)
-          npm run build -- --prod --output-path docs --base-href /$REPO_NAME/
+          npm run build --production --output-path docs --base-href /$REPO_NAME/
 
       - name: Rename index.html to 404.html
         run: mv docs/index.html docs/404.html
