@@ -30,12 +30,17 @@ jobs:
         run: |
           REPO_NAME=$(echo $REPOSITORY_NAME | cut -d'/' -f2)
           npm run build --prod --base-href=/$REPO_NAME/
+    
+      - name: Move build output to docs
+        run: |
+          mkdir docs
+          mv dist/relic-query/browser/* docs
 
-      # - name: Rename index.html to 404.html
-        # run: mv docs/index.html docs/404.html
+      - name: Rename index.html to 404.html
+        run: cp docs/index.html docs/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist/browser
+          publish_dir: docs
