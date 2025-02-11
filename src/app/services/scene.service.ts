@@ -250,7 +250,7 @@ export class SceneService {
       const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       scene.background = new THREE.Color(0xEEEEEE);
-      renderer.setSize(512, 512);
+      renderer.setSize(256, 256);
       renderer.toneMapping = THREE.ReinhardToneMapping;
       renderer.toneMappingExposure = 2.3;
   
