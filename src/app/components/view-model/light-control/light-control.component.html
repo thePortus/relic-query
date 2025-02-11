@@ -1,0 +1,101 @@
+<div class="w-full flex flex-col justify-start items-center">
+    <!-- directional lights -->
+    <ng-container *ngIf="type == 'directional' || type == 'point'">
+        <div class="flex flex-row justify-start items-center">
+            <button
+                [colorPicker]="decimalToHexColor(light.color)"
+                (colorPickerChange)="hexColorToDecimal('color', $event)"
+                cpDialogDisplay="inline"
+                mat-raised-button aria-label="Color selection" >
+                    Select Color
+            </button>
+        </div>
+        <mat-icon class="text-2xl">wb_sunny</mat-icon>
+        <mat-slider
+            class="w-full"
+            [min]="0"
+            [max]="1"
+            [step]="0.05"
+            (input)="changeLight('intensity', $event)"
+            discrete
+        >
+            <input class="w-full" value="{{ light.intensity }}" matSliderThumb>
+        </mat-slider>
+        
+        <mat-icon class="text-2xl">location_on</mat-icon>
+        <div class="flex flex-row justify-start items-center">
+            <label>X: </label>
+            <mat-slider
+                class="w-full"
+                [min]="-1000"
+                [max]="1000"
+                [step]="1"
+                (input)="changeLight('x', $event)"
+                discrete
+        
+            >
+                <input class="w-full" value="{{ light.x }}" matSliderThumb>
+            </mat-slider>
+        </div>
+        <div class="flex flex-row justify-start items-center">
+            <label>Y: </label>
+            <mat-slider
+                class="w-full"
+                [min]="-1000"
+                [max]="1000"
+                [step]="1"
+                (input)="changeLight('y', $event)"
+                discrete
+        
+            >
+                <input class="w-full" value="{{ light.y }}" matSliderThumb>
+            </mat-slider>
+        </div>
+        <div class="flex flex-row justify-start items-center">
+            <label>Z: </label>
+            <mat-slider
+                class="w-full"
+                [min]="-1000"
+                [max]="1000"
+                [step]="1"
+                (input)="changeLight('z', $event)"
+                discrete
+        
+            >
+            <input class="w-full" value="{{ light.z }}" matSliderThumb>
+        </mat-slider>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="type == 'hemisphere'">
+        <div class="flex flex-row justify-start items-center">
+            <button
+                [colorPicker]="decimalToHexColor(light.skyColor)"
+                (colorPickerChange)="hexColorToDecimal('skyColor', $event)"
+                cpDialogDisplay="inline"
+                mat-raised-button aria-label="Sky color selection" >
+                    Select Sky Color
+                </button>
+        </div>
+        <div class="flex flex-row justify-start items-center">
+            <button
+                [colorPicker]="decimalToHexColor(light.groundColor)"
+                (colorPickerChange)="hexColorToDecimal('groundColor', $event)"
+                cpDialogDisplay="inline"
+                mat-raised-button aria-label="Ground color selection" >
+                Select Ground Color
+            </button>
+        </div>
+        <mat-icon class="text-2xl">wb_sunny</mat-icon>
+        <mat-slider
+            class="w-full"
+            [min]="0"
+            [max]="1"
+            [step]="0.05"
+            (input)="changeLight('intensity', $event)"
+            discrete
+        >
+            <input class="w-full" value="{{ light.intensity }}" matSliderThumb>
+        </mat-slider>
+
+    </ng-container>
+</div>

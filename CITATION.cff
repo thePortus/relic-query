@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Thomas
+    given-names: David
+    orcid: https://orcid.org/0000-0001-5494-6297
+title: "Relic Query"
+abstract: "Open-source replacement for Sketchfab for hosting 3D models for Galleries, Libraries, Archives, and Museums"
+version: 0.0.1
+date-released: "2025-1-8"
+license: "CC-BY-NC-SA-4.0"
+repository-code: "https://github.com/BCDigSchol/relic-query"

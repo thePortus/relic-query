@@ -1,0 +1,16 @@
+id,title,filename,attribution_url,zoom_level,rotation_x,rotation_y,rotation_z,pan_out
+1,Apollo Command Capsule (Space),apollo_command_capsule.glb,https://3d.si.edu/object/3d/command-module-apollo-11:d8c6457e-4ebc-11ea-b77f-2e728ce88125,1,0,0,0,300
+2,Armstrong's Spacesuit (Space),armstrong.stl,https://3d.si.edu/object/3d/neil-armstrong-spacesuit:d8c63ba6-4ebc-11ea-b77f-2e728ce88125,1,270,0,270
+3,Wright Flyer (Aviation),wright_flyer.glb,https://3d.si.edu/object/3d/1903-wright-flyer:d8c62e5e-4ebc-11ea-b77f-2e728ce88125,5,0,0,0
+4,Wooly Mammoth (Animal),wooly_mammoth.gltf,https://3d.si.edu/object/3d/mammuthus-primigenius-blumbach:341c96cd-f967-4540-8ed1-d3fc56d31f12,4,0,45,0
+5,Lycaste Virginalis (Plant),lycaste_virginalis.gltf,https://3d.si.edu/object/3d/lycaste-virginalis-bloom:5ff6e90a-4ddb-4eea-a69c-40970f85fbcb,24,0,0,0
+6,Vanda Coerulea (Plant),vanda_coerulea.glb,https://3d.si.edu/object/3d/vanda-coerulea:5b4f1c68-b5c1-4932-92ca-3119afa8af18,2,0,0,0
+7,Unio Hainesianus (Animal),unio_hainesianus.gltf,https://3d.si.edu/object/3d/unio-hainesianus:69e09387-bb1d-4ca6-904c-21e3786218b8,80,0,0,0
+8,Capra Hircus Linnaeus (Animal),capra_hircus_linnaeus.glb,https://3d.si.edu/object/3d/capra-hircus-linnaeus:9d283b89-d90c-49d7-958e-e6f9adf1f63d,80,0,0,0
+9,Triceratops Horridus (Animal),triceratops_horridus.glb,https://3d.si.edu/object/3d/triceratops-horridus-marsh-1889:d8c623be-4ebc-11ea-b77f-2e728ce88125,5,0,0,0
+10,Hanbok (Clothing),hanbok.glb,https://3d.si.edu/object/3d/hanbok:2f9c4c60-1658-47e5-97a5-b734ff677819,16,0,0,0
+11,Ewer (Porcelain),ewer.glb,https://3d.si.edu/object/3d/ewer:349e8fa2-9461-4e33-bae9-5e9cdd3e72bb,32,0,0,0
+12,Athletic Shoes (Clothing),athletic_shoes.glb,https://3d.si.edu/object/3d/athletic-shoes-found-sonoran-desert:0e640a61-b42c-4d71-a5d8-467e936e7d8f,75,0,0,0
+13,Ground Zero Hard Hat (Clothing),ground_zero_hardhat.glb,https://3d.si.edu/object/3d/hard-hat-worn-elizabeth-queen-ann-burnett-during-cleanup-ground-zero:8cda6ba3-a61e-4d8e-826c-5f8cf4287908,50,10,30,0
+14,Old Arrow Maker (Statue),old_arrowmaker.glb,https://3d.si.edu/object/3d/old-arrow-maker:99ca3d6f-6d54-45a5-9b95-f8c245a662c2,25,10,30,0
+15,Pioneer Woman (Statue),pioneer_woman.glb,https://3d.si.edu/object/3d/pioneer-woman:57fe1873-98a1-4853-87bc-203ff92deef6,15,0,0,0

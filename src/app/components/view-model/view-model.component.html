@@ -1,0 +1,47 @@
+<ng-container [ngSwitch]="loading">
+    <ng-container *ngSwitchCase="true">
+        <div class="loading">
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="false">
+        <mat-sidenav-container class="w-full h-full" autosize #sidenav>
+            <mat-sidenav #drawer mode="side" position="end">
+                <div class="p-5 w-full flex flex-col justify-center items-center">
+                    <button (click)="toggleSideNav()" color="primary" class="mb-2 w-full border border-black border-solid bg-white" mat-raised-button aria-label="Hide controls">
+                        <mat-icon>arrow_back</mat-icon>
+                    </button>
+                    <mat-accordion class="w-full">
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    <div class="text-2xl">Hemisphere Light</div>
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <!--
+                            <app-light-control
+                                class="w-full"
+                                type="hemisphere"
+                                >
+                            </app-light-control>
+                            -->
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </div>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <app-canvas class="w-full" [data]="data"></app-canvas>
+                <div class="fixed top-0 right-0 m-5 z-50">
+                    <button (click)="toggleSideNav()" class="border border-black border-solid bg-white" mat-mini-fab aria-label="Show controls">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                </div>
+                <div class="fixed bottom-0 left-0 m-5 z-50">
+                    <button [routerLink]="'/items'" class="border border-black border-solid bg-white" mat-mini-fab aria-label="Go back">
+                        <mat-icon>arrow_back</mat-icon>
+                    </button>
+                </div>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </ng-container>
+</ng-container>
