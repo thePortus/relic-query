@@ -10,7 +10,8 @@ export class CsvService {
   constructor(private http: HttpClient) { }
 
   parseCSV(fileName: string): Promise<any[]> {
-    const baseURL = '/'; // Set the base URL
+    // TODO: Add a setting for the project base href to replace /relic-query/
+    const baseURL = window.location.hostname === 'localhost' ? '/' : '/relic-query/'; // Dynamically set the base URL
     const filePath = `${baseURL}${fileName}`;
     return this.http.get(filePath, { responseType: 'text' }).toPromise().then((csvData:any) => {
       return new Promise((resolve, reject) => {
